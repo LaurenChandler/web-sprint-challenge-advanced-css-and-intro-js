@@ -216,7 +216,11 @@ console.log(artists[2].bio);
 Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue 
 and console.log() to check your work. */
 
-artists(splice(9,1)).name;
+artists(splice(artists[8].name);
+
+artists.push('Vincent van Gogh');
+
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -236,29 +240,34 @@ function getArtistByIndex(array, index) {
 /* Task 4: Create a function called get20s() that takes data as an argument and returns 
 an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
+function get20s(arr, string){
+    for(let i = 0; i < arr.length; i++ ){
+    if(arr[i > 1899].includes(string)){
+    return arr[i];
+        }
+     }
+  }
+ console.log(get20s(artists, 'years'));
 
-  /* Code here */
-
-}
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
- * removeArtist removes an artist from the array at the index and console.logs the length of the remaining dataset.
+ * removeArtist removes an artist from the array at the index and console.logs 
+ * the length of the remaining dataset.
  * 
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19. 
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(array, number) {
-  array.splice(number,8);
+function removeArtist(array, index) {
+  array.splice({index});
   }
   
-  console.log(artists);
-
+  console.log(artists(8));
+  console.log(artists[2].bio);
 
 
 
@@ -280,27 +289,24 @@ At the end, this function should console.log() the new array with information ad
     array.push({id, name, years, genre, nationality, bio});
     return array;
     }
-  }
   console.log(addArtist(artists, 20, 'Lauren Chandler', '1990-2020', 'Web Design', 'Swedish-American', 'I like cats. Design and art is pretty cool too.'));
-/* Task 7: Create a function called lotsOfArt() that takes one argument: 
+
+  /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
 
 and returns an array with names of artists who painted more than 100 paintings.
 
-For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
+For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", 
+..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-  let delciousApples = [];
-  for(let i = 0; i < artists.length; i++){
-      if(artists[i].includes('Delicious')){
-       delciousApples.push(apples[i]);  
-      }
-    }
-  console.log(lotsOfArt)
-
+function lotsOfArt(array){
+for(let i = 0; i < paintings.length; i++){
+  if(artists[i].paintings > 99)
+  return artist.name;
+  }
 }
-
+  console.log(lotsOfArt(name(paintings > 99)));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
