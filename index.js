@@ -216,11 +216,14 @@ console.log(artists[2].bio);
 Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue 
 and console.log() to check your work. */
 
-artists(splice(artists[8].name);
+let name = {newSpelling: "Vicent van Gogh"}
+console.log(artists[84], name)
 
-artists.push('Vincent van Gogh');
-
-console.log(artists[8].name);
+/*function changeName(array, index, name){
+  array[index].name = name;
+  return array;
+}
+console.log(changeName(artists, 84, "Vincent van Gogh"));*/
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -230,11 +233,11 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(array, index) {
-  array.push({index});
-    return `The artist at index ${this.id} is ${this.name}.`;
+function getArtistByIndex(array, id) {
+  for(let i = 0; i < arr.length; i++){
+    return `The artist at index {id} is {name}.`;
   }
-  console.log(artists, 0)
+  console.log(getArtistByIndex[artists.length, 0]);
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns 
@@ -242,12 +245,12 @@ an array with names of artists who lived in the 20th century (1900-2000) */
 
 function get20s(arr, string){
     for(let i = 0; i < arr.length; i++ ){
-    if(arr[i > 1899].includes(string)){
-    return arr[i];
+    if(arr.includes(string[i > "1899"])){
+    return arr;
         }
      }
   }
- console.log(get20s(artists, 'years'));
+ console.log(get20s('years'));
 
 
 
@@ -262,12 +265,22 @@ function get20s(arr, string){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(array, index) {
+/*function removeArtist(array, index) {
   array.splice({index});
   }
   
   console.log(artists(8));
-  console.log(artists[2].bio);
+  console.log(artists[2].bio);*/
+
+function removeArtist(array, index){
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === index){
+      array.splice(i,1);
+      return array;
+    }
+  }
+}
+console.log(removeArtist(artists, 0));
 
 
 
@@ -300,13 +313,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", 
 ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
+function lotsOfArt(){
 for(let i = 0; i < paintings.length; i++){
   if(artists[i].paintings > 99)
   return artist.name;
   }
 }
-  console.log(lotsOfArt(name(paintings > 99)));
+  console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//

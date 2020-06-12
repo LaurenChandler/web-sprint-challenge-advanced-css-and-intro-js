@@ -143,7 +143,7 @@ button:hover{
     }	
     nav span{
         border-left:1.5px solid #626262;
-    
+        line-height:10px;
     }
     h1{
         font-size:2.5rem;
@@ -175,3 +175,26 @@ button:hover{
         height:auto;
         align-items: center;
     }
+    button:hover {	
+        animation: alertPulse 2s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1;
+        background: #000000;
+    }	
+
+    img:hover {	
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; 
+    }
+
+    @keyframes spin {
+        from {
+        transform:rotate(0deg);
+        }
+        to {
+        transform:rotate(360deg);
+        }
+    }
+}
