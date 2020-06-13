@@ -217,7 +217,7 @@ Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this
 and console.log() to check your work. */
 
 let name = {newSpelling: "Vicent van Gogh"}
-console.log(artists[84], name)
+console.log(artists[84], name);
 
 /*function changeName(array, index, name){
   array[index].name = name;
@@ -233,25 +233,25 @@ console.log(changeName(artists, 84, "Vincent van Gogh"));*/
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(array, id) {
-  for(let i = 0; i < arr.length; i++){
-    return `The artist at index {id} is {name}.`;
+function getArtistByIndex(id, artist) {
+    return `The artist at index ${id} is ${artist[id].name}.`;
   }
-  console.log(getArtistByIndex[artists.length, 0]);
+ console.log(getArtistByIndex(0, artists));
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns 
 an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(arr, string){
-    for(let i = 0; i < arr.length; i++ ){
-    if(arr.includes(string[i > "1899"])){
-    return arr;
-        }
-     }
+function get20s(artist, year){
+  string.split(year);
+  if (year >= 1900) {
+    return (artist.name);
   }
- console.log(get20s('years'));
-
+  else (year = 2000) {
+    return (artist.name);
+  }
+}
+ console.log(get20s(artists.name));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -272,16 +272,14 @@ function get20s(arr, string){
   console.log(artists(8));
   console.log(artists[2].bio);*/
 
-function removeArtist(array, index){
-  for(let i = 0; i < array.length; i++){
-    if(array[i] === index){
-      array.splice(i,1);
-      return array;
-    }
+function removeArtist(arr, index){
+for( var i = 0; i < arr.length; i++){ 
+  if ( arr[i] === index) 
+  { arr.splice(i); }
   }
 }
-console.log(removeArtist(artists, 0));
-
+console.log(getArtistByIndex(0, artists));
+console.log(getArtistByIndex(artists.length));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information 
@@ -315,7 +313,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(){
 for(let i = 0; i < paintings.length; i++){
-  if(artists[i].paintings > 99)
+  if(artists[i].paintings >= 100)
   return artist.name;
   }
 }
