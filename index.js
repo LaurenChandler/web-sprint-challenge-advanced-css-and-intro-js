@@ -82,7 +82,7 @@ const artists = [
     {
       "id": 8,
       "name": "Vincent van Dough",
-      "years": "1853 – 1890",
+      "years": "1853 - 1890",
       "genre": "Post-Impressionism",
       "nationality": "Dutch",
       "bio": "Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.",
@@ -215,9 +215,9 @@ console.log(artists[2].bio);
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, 
 Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue 
 and console.log() to check your work. */
-
-let name = {newSpelling: "Vicent van Gogh"}
-console.log(artists[84], name);
+artists[8].name = 'Vincent van Gogh';
+//let name = {newSpelling: "Vicent van Gogh"}
+console.log(artists[8].name);
 
 /*function changeName(array, index, name){
   array[index].name = name;
@@ -233,7 +233,7 @@ console.log(changeName(artists, 84, "Vincent van Gogh"));*/
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, artist) {
+/*function getArtistByIndex(id, artist) {
     return `The artist at index ${id} is ${artist[id].name}.`;
   }
  console.log(getArtistByIndex(0, artists));
@@ -242,16 +242,15 @@ function getArtistByIndex(id, artist) {
 /* Task 4: Create a function called get20s() that takes data as an argument and returns 
 an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(artist, year){
-  string.split(year);
-  if (year >= 1900) {
-    return (artist.name);
+function get20s(arr){
+  let aliveIn20s = [];
+  for(var i = 0; i < arr.length; i++){
+ if (arr[i].years.includes(' 19')){
+    aliveIn20s.push(arr[i].name)}
   }
-  else (year = 2000) {
-    return (artist.name);
-  }
+  return aliveIn20s
 }
- console.log(get20s(artists.name));
+ console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -265,21 +264,11 @@ function get20s(artist, year){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-/*function removeArtist(array, index) {
-  array.splice({index});
+function removeArtist(array, index) {
+  array.splice(index, 1);
+  return array.length;
   }
-  
-  console.log(artists(8));
-  console.log(artists[2].bio);*/
-
-function removeArtist(arr, index){
-for( var i = 0; i < arr.length; i++){ 
-  if ( arr[i] === index) 
-  { arr.splice(i); }
-  }
-}
-console.log(getArtistByIndex(0, artists));
-console.log(getArtistByIndex(artists.length));
+console.log(removeArtist(artists, 0));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information 
@@ -311,13 +300,20 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", 
 ..."Albrecht Dürer"]*/
 
-function lotsOfArt(){
-for(let i = 0; i < paintings.length; i++){
-  if(artists[i].paintings >= 100)
-  return artist.name;
+function lotsOfArt(arr){
+  let over100 = []
+for(let i = 0; i < arr.length; i++){
+  if(arr[i].paintings >= 100){
+    over100.push(arr[i].name)
+    }
   }
+  return over100;
 }
   console.log(lotsOfArt(artists));
+
+  /*if (arr[i].years.includes(' 19')){
+    aliveIn20s.push(arr[i].name)}
+  }*/
 
 
 // 🎨🎨 STRETCH 🎨🎨//
