@@ -30,7 +30,18 @@ Variables are names used to hold one or more values, so values can be swapped in
 4. What is the purpose of using functions in code?
 A function is a block reusable code that performs a task.
 5. What is JSON data?
- JavaScript Object Notation is a data interchange format that uses human-readable text to store data objects (key–value pairs) and array data. JSON is used to send data between a server and web application
+ JavaScript Object Notation is a data interchange format that uses human-readable text to store data objects (key–value pairs) and arrays data. JSON is used to send data between a server and web application
+
+~~~~NEW QUESTIONS~~~!!!
+
+1. How would you describe acessibility on the web to someone new to programming?
+We need to use proper semantics in code to alert a screen reader to what is more important information. For example, h1 and p tags are semantic. span is not and will make accessibility more arduous.
+2. Talk about 3 different things you can do to ensure your website is accessible.
+Add header tags, nav, footer and sections to organize code, not divs or spans.
+3. How would you explain the concept of a variable to someone new to programming?
+Variables are names used to hold one or more values, so values can be swapped in for the variable without rewriting that block of code.
+4. What is the purpose of using functions in code?
+A function is a block reusable code that performs a task.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
